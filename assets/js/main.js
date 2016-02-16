@@ -14,11 +14,11 @@ angular.module("GradApp",[])
   ];
   
   var projectsArray = [
-    {name: "Misha Devine"},
-    {name: "Kelly Price"}, 
-    {name: "Jasmine Franklin"}, 
-    {name: "Julie Frisco"},
-    {name: "Kirsten Couch"}
+    {name: "www.teamtahjmowryofficial.is-great.org"},
+    {name: "www.panyhamagazine.com"}, 
+    {name: "www.panyhafoundation.org"}, 
+    {name: "www.sandhillins.com"},
+    {name: "www.theuselessweb.com"}
   ];
   
   var skillsArray = [

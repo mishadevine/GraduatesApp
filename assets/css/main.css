@@ -1,0 +1,23 @@
+/************** First Div **************/
+.container {
+/*  background-color: aqua;*/
+}
+.right-side {
+  float: right;
+  margin-right: 50px;
+  text-align: center;
+}
+
+/************** Second Div **************/
+.two {
+/*  background-color: #eee;*/
+  height: 200px;
+  padding: 20px;
+}
+
+/************** Third Div **************/
+.three {
+/*  background-color: blanchedalmond;*/
+  height: 400px;
+  padding: 30px;
+}
