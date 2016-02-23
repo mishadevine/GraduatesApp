@@ -1,42 +1,46 @@
 angular.module("GradApp",[])
-  .controller("Controller", function($scope,MyService) {
-    $scope.students = MyService.getStudents();
-    $scope.projects = MyService.getProjects();
-    $scope.skills = MyService.getSkills();
+
+  // exposing student data to frontend
+  .controller("MasterController", function($scope,StudentInformation) {
+    $scope.students = StudentInformation.getStudents();
+    $scope.projects = StudentInformation.getProjects();
+    $scope.skills = StudentInformation.getSkills();
 })
-.service("MyService",function(){
+
+// collecting static information
+.service("StudentInformation",function(){
   var studentArray = [
     {name: "Misha Devine"},
-    {name: "Kelly Price"}, 
-    {name: "Jasmine Franklin"}, 
+    {name: "Kelly Price"},
+    {name: "Jasmine Franklin"},
     {name: "Julie Frisco"},
     {name: "Kirsten Couch"}
   ];
-  
+
   var projectsArray = [
-    {name: "www.teamtahjmowryofficial.is-great.org"},
-    {name: "www.panyhamagazine.com"}, 
-    {name: "www.panyhafoundation.org"}, 
-    {name: "www.sandhillins.com"},
-    {name: "www.theuselessweb.com"}
+    {url: "www.teamtahjmowryofficial.is-great.org"},
+    {url: "www.panyhamagazine.com"},
+    {url: "www.panyhafoundation.org"},
+    {url: "www.sandhillins.com"},
+    {url: "www.theuselessweb.com"}
   ];
-  
+
   var skillsArray = [
-    {name: "Javascript"},
-    {name: "PHP"}, 
-    {name: "Angular"}, 
-    {name: "Node"},
-    {name: "SASS"}
+    {level: "Javascript"},
+    {level: "PHP"},
+    {level: "Angular"},
+    {level: "Node"},
+    {level: "SASS"}
   ];
-  
+
   this.getStudents = function () {
     return studentArray;
   }
-  
+
   this.getProjects = function () {
     return projectsArray;
   }
-  
+
   this.getSkills = function () {
     return skillsArray;
   }

@@ -1,33 +1,81 @@
 module.exports = function(express) {
   var router = express.Router();
 
-  router.get('/', function(req, res) {
+  router.get('/students', function(req, res) {
     res.json([
-      {name: "Misha Devine"},
-      {name: "Kelly Price"},
-      {name: "Jasmine Franklin"},
-      {name: "Julie Frisco"},
-      {name: "Kirsten Couch"}
-    ])
-  });
-
-  router.get('/projects', function(req, res) {
-    res.json([
-      {name: "www.teamtahjmowryofficial.is-great.org"},
-      {name: "www.panyhamagazine.com"},
-      {name: "www.panyhafoundation.org"},
-      {name: "www.sandhillins.com"},
-      {name: "www.theuselessweb.com"}
-    ])
-  });
-
-  router.get('/skills', function(req, res) {
-    res.json([
-      {name: "Javascript"},
-      {name: "PHP"},
-      {name: "Angular"},
-      {name: "Node"},
-      {name: "SASS"}
+      {name: "Misha Devine",
+      projects: [
+        {url: "www.teamtahjmowryofficial.is-great.org"},
+        {url: "www.facebook.com"},
+        {url: "www.chrisgolightlyofficial.com"}
+      ],
+      skills: [
+        {level: "Javascript" },
+        {level: "PHP"},
+        {level: "Nodejs"},
+        {level: "Angular"},
+        {level: "SASS"}
+      ]},
+      {name: "Kelly Price",
+      projects: [
+        {url: "www.teamtahjmowryofficial.is-great.org"},
+        {url: "www.facebook.com"},
+        {url: "www.chrisgolightlyofficial.com"},
+        {url: "www.panyhamagazine.com"},
+        {url: "www.panyhafoundation.com"}
+      ],
+      skills: [
+        {level: "Javascript" },
+        {level: "PHP"},
+        {level: "Nodejs"},
+        {level: "Angular"},
+        {level: "SASS"}
+      ]},
+      {name: "Jasmine Franklin",
+      projects: [
+        {url: "www.teamtahjmowryofficial.is-great.org"},
+        {url: "www.facebook.com"},
+        {url: "www.chrisgolightlyofficial.com"},
+        {url: "www.panyhamagazine.com"},
+        {url: "www.panyhafoundation.com"}
+      ],
+      skills: [
+        {level: "Javascript" },
+        {level: "PHP"},
+        {level: "Nodejs"},
+        {level: "Angular"},
+        {level: "SASS"}
+      ]},
+      {name: "Julie Frisco",
+      projects: [
+        {url: "www.teamtahjmowryofficial.is-great.org"},
+        {url: "www.facebook.com"},
+        {url: "www.chrisgolightlyofficial.com"},
+        {url: "www.panyhamagazine.com"},
+        {url: "www.panyhafoundation.com"}
+      ],
+      skills: [
+        {level: "Javascript" },
+        {level: "PHP"},
+        {level: "Nodejs"},
+        {level: "Angular"},
+        {level: "SASS"}
+      ]},
+      {name: "Kirsten Couch",
+      projects: [
+        {url: "www.teamtahjmowryofficial.is-great.org"},
+        {url: "www.facebook.com"},
+        {url: "www.chrisgolightlyofficial.com"},
+        {url: "www.panyhamagazine.com"},
+        {url: "www.panyhafoundation.com"}
+      ],
+      skills: [
+        {level: "Javascript" },
+        {level: "PHP"},
+        {level: "Nodejs"},
+        {level: "Angular"},
+        {level: "SASS"}
+      ]}
     ])
   });
   return router;
