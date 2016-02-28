@@ -1,27 +1,27 @@
 module.exports = function() {
-  var database = require("database.js");
+  var db = require("./database.js");
   var sequelize = db.connection;
 
   function _create(data,err,success) {
-    db.skills.create(data).then(success).catch(err);
+    db.skill.create(data).then(success).catch(err);
   }
 
   function _update(data,err,success) {
-    db.skills.find({where:{id:1}}).then(function(matchedSkill) {
+    db.skill.find({where:{id:data.id}}).then(function(matchedSkill) {
       matchedSkill.updateAttributes(data).then(success).catch(err);
     }).catch(err);
   }
 
   function _find(data,err,success) {
-    db.skills.find({where:{id:1}}).then(success).catch(err);
+    db.skill.find({where:{id:data.id}}).then(success).catch(err);
   }
 
   function _findAll(err,success) {
-    db.skills.findAll().then(success).catch(err);
+    db.skill.findAll().then(success).catch(err);
   }
 
   function _delete(data,err,success) {
-    db.skills.destroy({where:{id:1}}).then(success).catch(err);
+    db.skill.destroy({where:{id:data.id}}).then(success).catch(err);
   }
 
   return {
@@ -31,5 +31,5 @@ module.exports = function() {
     findAll: _findAll,
     delete: _delete
   }
-  
+
 }();

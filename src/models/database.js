@@ -4,7 +4,7 @@ var Sequelize = require('sequelize');
 var mysql = require('mysql');
 var _sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
-  dialect: "mysql",
+  dialect: process.env.DB_SCHEMA,
   port: process.env.DB_PORT,
   pool: {
     max: 5,
@@ -30,9 +30,6 @@ var _Skill = _sequelize.define('skill', {
     type: Sequelize.STRING
   }
 });
-
-// student.hasMany(project, {foreignKey: 'student_id'});
-// student.hasMany(skill, {foreignKey: 'skill_id'});
 
 _sequelize.sync();
 

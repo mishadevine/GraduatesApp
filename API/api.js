@@ -1,7 +1,7 @@
 module.exports = function(express) {
   var router = express.Router();
 
-  router.get('/students', function(req, res) {
+  router.get('/studentInfo', function(req, res) {
     res.json([
       {name: "Misha Devine",
       projects: [

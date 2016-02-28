@@ -3,9 +3,9 @@
   <head>
     <title>Grad Students Website</title>
      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
   </head>
   <body ng-app="GradApp" ng-controller="MasterController">
     <div class="jumbotron">
@@ -16,33 +16,24 @@
         </div>
       </div>
     </div>
-
-    <div class="two">
+    
+    <div ng-repeat="student in students" class="studList">
       <div class="col-md-4">
-        <p ng-repeat="student in students"> {{ student.name }} </p>
-      </div>
-
-      <div class="col-md-4">
-        <p ng-repeat="student in students"> {{ student.name }} </p>
-      </div>
-
-      <div class="col-md-4">
-        <p ng-repeat="student in students"> {{ student.name }} </p>
+        <p> {{ student.name }} </p>
       </div>
     </div>
 
-
-    <div class="three">
+    <div ng-repeat="student in students | filter: featuredStudent"  class="highStud">
       <div class="col-md-4">
-        <p> Misha Devine</p>
+        <p> {{ student.name }}</p>
       </div>
 
       <div class="col-md-4">
-        <p ng-repeat="project in projects"> <a href = "http://{{ project.url }}">{{ project.url }}</a> </p>
+        <p ng-repeat="project in student.projects"> <a href = "http://{{ project.url }}">{{ project.url }}</a> </p>
       </div>
 
       <div class="col-md-4">
-        <p ng-repeat="skill in skills"> {{ skill.level }} </p>
+        <p ng-repeat="skill in student.skills">{{ skill.level }} </p>
       </div>
     </div>
 

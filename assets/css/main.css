@@ -9,15 +9,16 @@
 }
 
 /************** Second Div **************/
-.two {
-/*  background-color: #eee;*/
-  height: 200px;
+.studList {
+/*background-color: #eee;*/
+  /*height: 200px;*/
   padding: 20px;
 }
 
 /************** Third Div **************/
-.three {
+.highStud {
 /*  background-color: blanchedalmond;*/
-  height: 400px;
+  /*margin-top: 30px;*/
+  /*height: 400px;*/
   padding: 30px;
 }
